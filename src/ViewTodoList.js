@@ -7,13 +7,13 @@ const ViewTodoList=(props)=>{
     }
     console.log(props.data);
     return(
-        <div className="container">
+        <div className="container mt-4">
             <div className="row">
             <h1>List</h1>
             </div>
             <div className="row border-top">
             {
-              props.data.length===0?null:props.data.map((item,key)=>{
+              props.data.length===0?<h5>No items to display</h5>:props.data.map((item,key)=>{
                 return(<div className="border-bottom" key={key}>
                 <div className="row mt-2"> <div className="col"><div className="row"><div className="col"><h3>{item.title}</h3></div></div></div> </div>
                 <div className="row mt-2"> <div className="col"><div className="row"><div className="col">{item.description}</div></div></div> </div>
